@@ -50,3 +50,8 @@ Running
 # Answer to Question 3
 In `memory1`, the VSZ is 8296 kB, whereas the RSS is just 816 kB. This is because even though the array is created, its elements are never accessed. Thus, following the practice of demand paging, the lazy allocation policy of the OS never actually generates physical pages for the array thus keeping the RSS low.</br>
 In `memory2`, the VSZ is 8304 kB, but the RSS is 3288 kB, about half the VSZ. This is because half the array is actually being touched, so the OS would have allocated physical pages for them and hence the increase in RSS. Note that for the latter half which is untouched, the OS still does not allocated physical pages for (most of) them, and hence the RSS is still only about half the VSZ.
+
+
+
+# Question 6: Screenshot of Execution of `process_list`
+![Screenshot of process_list Execution](q6/process_list_execution_ss.png)
